@@ -258,13 +258,13 @@ while True:
                                     client.sendText(receiver, cctv['sidermem'][msg.to])
                                 else:
                                     client.sendText(receiver, "很抱歉你尚未開始記錄")
-                            elif text.lower() == 'mode:self':
+                            elif text.lower() == '關閉':
                                 mode = 'self'
-                                client.sendText(receiver, 'Mode Public Off')
-                            elif text.lower() == 'mode:public':
+                                client.sendText(receiver, '已關閉公開')
+                            elif text.lower() == '開啟':
                                 mode = 'public'
-                                client.sendText(receiver, 'Mode Public ON')
-                            elif text.lower() == 'restart':
+                                client.sendText(receiver, '已開啟公開')
+                            elif text.lower() == '重新開始':
                                 restart_program()
                 except Exception as e:
                     client.log("[SEND_MESSAGE] ERROR : " + str(e))
